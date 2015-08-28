@@ -50,6 +50,5 @@ config.ngsi = {
     providerUrl: 'http://localhost:4041/ngsi10', 
     deviceRegistrationDuration: 'P1M' 
 };
-};
 
 module.exports = config;
