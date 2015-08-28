@@ -51,24 +51,28 @@ config.lwm2m = {
     types: [ ]
 };
 
-config.ngsi = {
-    logLevel: 'DEBUG',
-    contextBroker: {
-        host: '192.168.56.101',
-        port: '1026'
-    },
-    server: {
-        port: 4041
-    },
-    deviceRegistry: {
-        type: 'mongodb',
- 	host: 'localhost'
-    },
-    types: { },
-    service: 'smartGondor',
-    subservice: '/gardens',
-    providerUrl: 'http://192.168.56.1:4041',
-    deviceRegistrationDuration: 'P1M'
+config.ngsi = { 
+	    logLevel: 'DEBUG', 
+	    iotDiscovery: { 
+	        host: '127.0.0.1', 
+	        port: '8080' 
+	    }, 
+	    iotBroker: { 
+	        host: '127.0.0.1', 
+	        port: '8090' 
+	    }, 
+	    server: { 
+	        port: 4041 
+	    }, 
+	    deviceRegistry: { 
+	        type: 'memory' 
+	    }, 
+	    types: { }, 
+	    service: 'smartGondor', 
+	    subservice: '/gardens', 
+	    providerUrl: 'http://localhost:4041/ngsi10', 
+	    deviceRegistrationDuration: 'P1M' 
+	};
 };
 
 module.exports = config;
