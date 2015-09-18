@@ -32,11 +32,11 @@ config.ngsi = {
     logLevel: 'DEBUG', 
     iotDiscovery: { 
         host: '127.0.0.1', 
-        port: '8080' 
+        port: '8090' 
     }, 
     iotBroker: { 
         host: '127.0.0.1', 
-        port: '8090' 
+        port: '8080' 
     }, 
     server: { 
         port: 4041 
